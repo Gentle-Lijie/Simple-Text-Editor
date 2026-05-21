@@ -11,10 +11,13 @@ ENV VITE_API_URL=$VITE_API_URL
 ENV VITE_WS_URL=$VITE_WS_URL
 
 # Install pnpm
-RUN corepack enable && corepack prepare pnpm@latest --activate
+RUN corepack enable && corepack prepare pnpm@9 --activate
 
 # Copy package files
 COPY package.json pnpm-lock.yaml ./
+
+# Allow scripts
+#RUN pnpm config set allow-scripts "*"
 
 # Install dependencies
 RUN pnpm install --frozen-lockfile
