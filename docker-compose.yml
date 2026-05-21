@@ -7,7 +7,7 @@ services:
       context: ./frontend
       dockerfile: Dockerfile
       args:
-        - VITE_API_URL=${VITE_API_URL:-http://editor.lijie.space/api}
+        - VITE_API_URL=${VITE_API_URL:-http://editor.lijie.space}
         - VITE_WS_URL=${VITE_WS_URL:-ws://editor.lijie.space/api}
         - VITE_APP_TITLE=${VITE_APP_TITLE:-SimpleTextEditor}
         - VITE_APP_SHORT=${VITE_APP_SHORT:-STE}

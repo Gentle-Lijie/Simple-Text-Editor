@@ -3,7 +3,7 @@ FROM node:20-alpine AS builder
 WORKDIR /app
 
 # Build arguments for Vite (baked in at build time)
-ARG VITE_API_URL=/api
+ARG VITE_API_URL=
 ARG VITE_WS_URL=wss://example.com
 
 # Set as environment variables for Vite build
